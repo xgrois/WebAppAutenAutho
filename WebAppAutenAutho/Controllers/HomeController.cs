@@ -50,7 +50,7 @@ namespace WebAppAutenAutho.Controllers
         public async Task<IActionResult> Validate(string username, string password, string returnUrl)
         {
             ViewData["ReturnUrl"] = returnUrl;
-            if (username == "bob" && password == "pizza")
+            if (username == "bob" && password == "pizza") // This should be a typical DB access
             {
                 var claims = new List<Claim>();
                 claims.Add(new Claim("username", username));
